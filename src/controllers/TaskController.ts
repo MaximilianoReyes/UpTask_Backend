@@ -35,6 +35,7 @@ export class TaskController {
         try {
             req.task.name = req.body.name
             req.task.description = req.body.description
+            req.task.date = req.body.date
             await req.task.save()
             res.send('Tarea Actualizada')
         } catch (error) {
